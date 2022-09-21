@@ -14,7 +14,8 @@
 var len;
 var results = '';
 
-function apiSearch() {
+function apiSearch() { // must refresh to search a new word/phrase
+    
   var params = {
     "q": $("#query").val(),
     "count": "50",
@@ -35,7 +36,8 @@ function apiSearch() {
         results += "<p><a href='" + data.webPages.value[i].url + "'>" + data.webPages.value[i].name + "</a>: " + data.webPages.value[i].snippet + "</p>";
       }
 
-      $('#searchResults').html(results);
+        $('#searchResults').html(results);
+        $("#searchResults").css("visibility", "visible");
       $('#searchResults').dialog();
     })
     .fail(function () {
@@ -98,6 +100,10 @@ function getCurrTime() {
         if (date.getHours() < 22) {
             time = "0" + (date.getHours() % 12);
         }
+        else {
+            time = (date.getHours() % 12);
+        }
+
         if (date.getMinutes() < 10) {
             time += " : 0" + date.getMinutes();
         }
@@ -111,6 +117,10 @@ function getCurrTime() {
         if (date.getHours() < 10) {
             time = "0" + date.getHours();
         }
+        else {
+            time = date.getHours();
+        }
+
         if (date.getMinutes() < 10) {
             time += " : 0" + date.getMinutes();
         }
@@ -122,7 +132,6 @@ function getCurrTime() {
 
     $('#currentTime').on('click', function () {
         $("#time").css("visibility", "visible");
-       // $('<p>' + time + '</p>').appendTo('#time');
         $("#time").html('<p>' + time + '</p>');
 
         $("#time").dialog({
