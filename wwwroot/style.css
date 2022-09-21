@@ -1,0 +1,70 @@
+
+/*
+
+#ADD ME
+- CSS:
+  - [ * ] Set the background of the page to an image of your choice. ([Unsplash](unsplash.com) is a great resource for free images)
+  - [ * ] Set the visibility of the 'searchResults' and 'time' divs to hidden.
+  - [ * ] Style the rest of the page however you see fit. points will be lost if little or no effort is given in styling your site.
+
+*/
+
+.header {
+    padding: 60px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+#searchResults {
+    visibility: visible;
+}
+
+#time {
+    visibility: hidden;
+}
+
+body {
+    background-image: url("mountain-background.jpg");
+    background-size: cover;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* Style inputs */
+input[type=text], select {
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: 'Times New Roman';
+    font-size: 18px;
+}
+
+/* Style submit buttons */
+input[type=submit] {
+    background-color: #155A14;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Times New Roman';
+    font-size: 16px;
+}
+
+/* Add a background color to the submit button on mouse-over */
+    input[type=submit]:hover {
+        background-color: #779F77;
+    }
+
+/* Style input text box placeholder */
+#query::placeholder {
+    font-family: 'Times New Roman';
+    font-size:18px;
+    text-align: initial;
+}

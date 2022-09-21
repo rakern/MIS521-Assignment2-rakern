@@ -1,0 +1,67 @@
+<!--
+
+#ADD ME
+- HTML:
+  - [ * ] A header with the name of your 'search engine' (be creative).
+  - [ * ] A title of the same name.
+  - [ * ] A text box with an ID of 'query'.
+  - [ * ] A button with a value of 'Search' under your text box.
+  - [ * ] A second button that will display the current time.
+  - [ * ] An empty div with an ID of 'searchResults'.
+  - [ * ] A second empty div with an ID of 'time'.
+
+
+#ADD ME
+- Include JQuery, JQuery UI, and a JQuery UI theme via CDN links.
+  - These links can be found [here](https://developers.google.com/speed/libraries/).
+  - You should use a SRI hash for each of these CDN links like the example given in class. [Srihash](srihash.org) is an excellent tool for this.
+
+ -->
+
+
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <title>Elgoog</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha384-i61gTtaoovXtAbKjo903+O55Jkn2+RtzHtvNez+yI49HAASvznhe9sZyjaSHTau9" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/dark-hive/jquery-ui.css" integrity="sha384-3ieyaBucFPB8Ador58SQ7D08XB0WavQbMUwc6/lvI43uaTQYBrJwbX+bGwAQXQgL" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha384-4D3G3GikQs6hLlLZGdz5wLFzuqE9v4yVGAcOH86y23JqBDPzj9viv0EqyfIa6YUL" crossorigin="anonymous"></script>
+
+</head>
+
+<body onload="doJQuery()">
+
+    <div class="header">
+        <h1 id="engineName">ELGOOG</h1>
+    </div>
+
+    <div class="searchBar">
+        <input type="text" id="query" name="query" placeholder="What are you looking for?" />
+        <br />
+        <input type="submit" id="search" name="search" value="Search"  />
+        <input type="submit" id="currentTime" name="currentTime" value="Get Current Time" />
+        <input type="submit" id="feelingLucky" name="feelingLucky" value="I'm Feeling Lucky" />
+    </div>
+
+    <div id="searchResults">
+
+    </div>
+
+    <div id="time">
+
+    </div>
+
+    <div id="lucky">
+
+    </div>
+
+    <script type="text/javascript" src="./script.js"></script>
+
+</body>
+
+</html>
